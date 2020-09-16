@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBootOkHttp/okhttp.iml" filepath="$PROJECT_DIR$/SpringBootOkHttp/okhttp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringBootSeleniumhq/seleniumhq.iml" filepath="$PROJECT_DIR$/SpringBootSeleniumhq/seleniumhq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/自动化测试.iml" filepath="$PROJECT_DIR$/.idea/自动化测试.iml" />
+    </modules>
+  </component>
+</project>
