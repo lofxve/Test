@@ -1,13 +1,12 @@
-package com.example.Base;
+package com.example.seleniumhq.Base;
 
-import com.example.Entity.Entity;
+import com.example.seleniumhq.Entity.Entity;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.stereotype.Service;
-import sun.rmi.runtime.Log;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;

@@ -21,13 +21,6 @@ import java.io.IOException;
 @Slf4j
 @Service
 public class GoodsCategory {
-    /**
-     * @Author weizhendong
-     * @Description //TODO 增加货邮类别
-     * @Date 18:21 2020/9/16
-     * @Param [httpClientTool, mOkHttpClient, user]
-     * @return void
-     **/
     public void add(HttpClientTool httpClientTool, OkHttpClient mOkHttpClient, User user) throws IOException {
         //用例
         TestCase testCase = new TestCase();

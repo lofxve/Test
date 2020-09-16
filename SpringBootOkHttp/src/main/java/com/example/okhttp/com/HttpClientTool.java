@@ -145,6 +145,7 @@ public class HttpClientTool {
         }
         log.info("{} Run 完成", testcase.getName());
     }
+
     /**
      * @Author weizhendong
      * @Description //TODO 拼接url
@@ -169,6 +170,7 @@ public class HttpClientTool {
         url.build();
         return String.valueOf(url);
     }
+
     /**
      * @Author weizhendong
      * @Description //TODO 格式化json字符串

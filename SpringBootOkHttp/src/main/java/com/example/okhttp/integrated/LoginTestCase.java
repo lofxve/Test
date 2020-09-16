@@ -27,7 +27,6 @@ import java.util.List;
  **/
 @Slf4j
 @Service
-@Controller
 public class LoginTestCase {
     public String testLoginInstaller(HttpClientTool httpClientTool,OkHttpClient mOkHttpClient,User user) throws IOException {
         TestCase testCase = new TestCase();

@@ -1,4 +1,4 @@
-package com.example.Util;
+package com.example.seleniumhq.Util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.Entity.Entity;
+import com.example.seleniumhq.Entity.Entity;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
@@ -25,7 +25,15 @@ import org.springframework.stereotype.Service;
 public class ReadExcelUtil{
     private Entity client;
     private List<Entity> arrayList = new ArrayList<>();;
-    public ReadExcelUtil(String path){
+
+    /**
+     * @Author weizhendong
+     * @Description //TODO 创建Entity
+     * @Date 21:02 2020/9/16
+     * @Param [path]
+     * @return void
+     **/
+    public void createReadExcelUtil(String path){
         File file = new File(path);
         List excelList = readExcel(file);
 //        System.out.println("构建client>");
@@ -36,12 +44,13 @@ public class ReadExcelUtil{
             arrayList.add(listToEntity(list));
         }
     }
+
     /**
      * @Author weizhendong
      * @Description //TODO list转成Entity
      * @Date 12:02 2020/9/16
      * @Param [list]
-     * @return com.example.Entity.Entity
+     * @return com.example.seleniumhq.Entity.Entity
      **/
     public Entity listToEntity(List list){
         return Entity.builder()
@@ -59,6 +68,7 @@ public class ReadExcelUtil{
                 .describe((String)list.get(8))
                 .build();
     }
+
     /**
      * @Author weizhendong
      * @Description //TODO 去读Excel 返回List

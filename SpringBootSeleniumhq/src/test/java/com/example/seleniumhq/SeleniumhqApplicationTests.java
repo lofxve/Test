@@ -1,9 +1,9 @@
 package com.example.seleniumhq;
 
-import com.example.Base.Client;
-import com.example.Base.SeleniumhqCase;
-import com.example.Entity.Entity;
-import com.example.Util.ReadExcelUtil;
+import com.example.seleniumhq.Base.Client;
+import com.example.seleniumhq.Base.SeleniumhqCase;
+import com.example.seleniumhq.Entity.Entity;
+import com.example.seleniumhq.Util.ReadExcelUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -12,16 +12,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
 @Slf4j
 class SeleniumhqApplicationTests {
+    @Autowired
+    private Client client;
     @Test
     void clientRunHuoYun(){
-        Client client = new Client();
         String path = "D:\\java\\Spring项目\\自动化测试\\自动化测试\\SpringBootSeleniumhq\\src\\main\\resources\\货运系统测试.xls";
         client.run(path);
     }
@@ -42,7 +42,8 @@ class SeleniumhqApplicationTests {
     @Test
     void exclerun() throws InterruptedException {
         String path = "D:\\java\\Spring项目\\自动化测试\\自动化测试\\SpringBootSeleniumhq\\src\\main\\resources\\百度一下.xls";
-        ReadExcelUtil entityUtil = new ReadExcelUtil(path);
+        ReadExcelUtil entityUtil = new ReadExcelUtil();
+        entityUtil.createReadExcelUtil(path);
         SeleniumhqCase se = new SeleniumhqCase();
         log.info("打开浏览器");
         se.client(entityUtil.getClient());
@@ -65,8 +66,8 @@ class SeleniumhqApplicationTests {
     @Test
     void readexcel(){
         String path = "D:\\java\\Spring项目\\自动化测试\\自动化测试\\SpringBootSeleniumhq\\src\\main\\resources\\百度一下.xls";
-        ReadExcelUtil obj = new ReadExcelUtil(path);
-
+        ReadExcelUtil obj = new ReadExcelUtil();
+        obj.createReadExcelUtil(path);
         List excelList = obj.getArrayList();
 
         System.out.println("构建client>");

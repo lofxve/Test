@@ -1,6 +1,5 @@
-package com.example.Entity;
+package com.example.seleniumhq.Entity;
 
-import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
 import lombok.Builder;
 import lombok.Data;
 

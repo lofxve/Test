@@ -23,6 +23,13 @@ import java.util.concurrent.TimeUnit;
 @SpringBootTest
 @Slf4j
 class OkhttpApplicationTests {
+    /**
+     * @Author weizhendong
+     * @Description //TODO 创建一个OkHttp请求客户端，并记录cookie值
+     * @Date 21:35 2020/9/15
+     * @Param
+     * @return
+     **/
     CookieJar cookieJar = new CookieJar() {
         //Cookie缓存区
         private final Map<String, List<Cookie>> cookiesMap = new HashMap<String, List<Cookie>>();
@@ -48,19 +55,13 @@ class OkhttpApplicationTests {
             return cookiesList != null ? cookiesList : new ArrayList<Cookie>();
         }
     };
-    /**
-     * @Author weizhendong
-     * @Description //TODO 创建一个OkHttp请求客户端，并记录cookie值
-     * @Date 21:35 2020/9/15
-     * @Param 
-     * @return 
-     **/
     OkHttpClient mOkHttpClient=new OkHttpClient.Builder()
             .connectTimeout(5000, TimeUnit.MILLISECONDS)
             .cookieJar(cookieJar)
             .build();
 
     HttpClientTool httpClientTool = new HttpClientTool();
+
     @Autowired
     private LoginTestCase loginTestCase;
     @Autowired
